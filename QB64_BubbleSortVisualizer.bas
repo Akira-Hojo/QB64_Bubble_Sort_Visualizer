@@ -1,14 +1,11 @@
 '**************************************************************************************************
-'**BUBBLE SORT VISUALIZER by AKITA SOFT (C) 2021**
+'**SORTING VISUALIZER by AKITA SOFT (C) 2021**
 '**FEEL FREE TO USE HOW YOU WANT WITHOUT LICENSE!**
 '**************************************************************************************************
-
 _TITLE "Bubble Sort Visualizer"
-
 '**************************************************************************************************
 '*VARIABLES
 '**************************************************************************************************
-
 soundOn = 1
 numOfValues = 35 'Random number amount
 maxNum = 470 'Maximum value of random numbers
@@ -85,6 +82,7 @@ NEXT i
 
 RETURN
 
+
 '**************************************************************************************************
 bubbleSort:
 '**************************************************************************************************
@@ -150,6 +148,7 @@ DO
             LINE ((lineThickness * i + lineThickness) + z + leftOffset, lowerOffset)-((lineThickness * i + lineThickness) + z + leftOffset, maxNum - rndNums(i + 1)), blue
         NEXT z
 
+
         'Iterate array again
     NEXT i
 
@@ -163,13 +162,17 @@ DO
 
 LOOP WHILE swapped = 1
 
-'Make the rest of the array BLUE when we are done to make a fully sorted list visually
-FOR i = 0 TO numOfValues - sorted + 1
+'Make the rest of the array BLUE when we are done to make a fully sorted liste visually
+FOR i = numOfValues - sorted + 1 TO 0 STEP -1
     FOR z = 0 TO (lineThickness - 1)
         LINE ((lineThickness * i) + z + leftOffset, lowerOffset)-((lineThickness * i) + z + leftOffset, maxNum - rndNums(i)), blue
     NEXT z
+    _DELAY delayTime
+
 NEXT i
+
 RETURN
+
 
 '**************************************************************************************************
 rngArrayFill:
