@@ -1,5 +1,5 @@
 '**************************************************************************************************
-'**SORTING VISUALIZER by AKITA SOFT (C) 2021**
+'**BUBBLE SORT VISUALIZER by AKITA SOFT (C) 2021**
 '**FEEL FREE TO USE HOW YOU WANT WITHOUT LICENSE!**
 '**************************************************************************************************
 _TITLE "Bubble Sort Visualizer"
@@ -163,7 +163,7 @@ DO
 LOOP WHILE swapped = 1
 
 
-'Make the rest of the array BLUE when we are done to make a fully sorted liste visually
+'Make the rest of the array BLUE when we are done to make a fully sorted list visually
 FOR i = 0 TO numOfValues - sorted + 1
     FOR z = 0 TO (lineThickness - 1)
         LINE ((lineThickness * i) + z + leftOffset, lowerOffset)-((lineThickness * i) + z + leftOffset, maxNum - rndNums(i)), blue
